@@ -1,5 +1,9 @@
 /* Base Styles -------------------- */
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     color: #878787;
     margin: 0;
@@ -28,12 +32,19 @@ h3 {
     margin-bottom: 1.7em; /* 34px */
 }
 
-/*li {*/
-    /*display: inline-block;  */
-    /*padding: 0 12px;*/
-    /*border-right: solid 1px;*/
-    /*margin: 80px 0;*/
-/*}*/
+img {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+ul,
+ol {
+    margin: 30px 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
 
 /* Pseudo-classes ------------------ */
 
@@ -57,7 +68,11 @@ a:active {
 /* Main Styles --------------------- */
 
 .main-header {
-    background-color: #ffa949;
+    padding-top: 170px;
+    height: 850px;
+
+    background: #ffa949 url('../img/mountains.jpg') no-repeat center;
+    background-size: cover;
 }
 
 .title {
@@ -109,22 +124,46 @@ a:active {
 
 .primary-content,
 .secondary-content {
-    width: 60%;
+    width: 75%;
+    padding-left: 50px;
+    padding-right: 50px;
     margin: auto;
+    max-width: 960px;
 }
 
 .wildlife {
     color: white;
-    background-color: #434a52;
+    text-align: left;
     padding: 18% 24%;
     border-top: 10px solid #ffa949;
     margin: 105px 0 60px;
+    background: #434a52 url('../img/bear.jpg') no-repeat center;
+    background-size: cover;
 }
 
+.arrow {
+    width: 50px;
+}
 
+/* Floated Columns ------------------ */
 
+.resorts,
+.tips {
+    width: 46.5%;
+}
 
+.tips {
+    float: left;
+}
 
+.resorts {
+    float: right;
+}
 
+/* Float Clearfix ------------------ */
 
-
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
